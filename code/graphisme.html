@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMI Toolbox : Graphisme</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="medias/logoWhite.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- JS & JQuery & AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="app.js"></script>
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/e6c960569c.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body onscroll="shrink()" id="all">
+    <section class="menu">
+        <a href="index.php"><img id="logoPage" src="medias/logoWhite.png" alt="Accueil"></a>
+        <nav>
+            <li><a href="index.php">Accueil</a></li>
+            <li><a href="dev.html">Développement</a></li>
+            <li class="activePage"><a href="graphisme.html">Graphisme</a></li>
+            <li><a href="communication.html">Communication</a></li>
+            <li><a href="gestion.html">Divers</a></li>
+        </nav>
+    </section>
+
+    <section class="page">
+        <h1>Graphisme / Multimedia</h1>
+
+        <h3>Recommandations par :</h3>
+        <div class="tagList">
+            <p class="tag all active" onclick="filterSelection('all')">Tous</p>
+            <p class="tag prof" onclick="filterSelection('recoProf')">Professeur</p>
+            <p class="tag intervenant" onclick="filterSelection('recoIntervenant')">Intervenant(e)</p>
+            <p class="tag etud" onclick="filterSelection('recoEtud')">Étudiant(e)</p>
+        </div>
+
+        <div class="reco" >
+            <a href="index.php#reco"><i class="fas fa-paper-plane"></i> Proposer un lien</a>
+        </div>
+
+        <!-- ??? -->
+
+        <h2><i class="fas fa-tools"></i> Outils</h2>
+        <hr>
+
+        <div class="listBails">
+
+            <div class="bail recoProf show" id="whatTheFont">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="prof">WhatTheFont</h4>
+                    <div class="keywordList">
+                        <p class="strong">polices</p>
+                    </div>
+                    <em>Identificateur de fonts</em>
+                    <p>
+                        <li><b>Identifier les polices de caractère</b> utilisées à partir d'une image</li>
+                        <li>Suggérer des <b>polices similaires</b> si la police n'est pas trouvée</li>
+                    </p>
+                    <a href="https://www.myfonts.com/WhatTheFont/" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <div class="bail recoEtud show" id="fontSpace">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="etud">Font Space</h4>
+                    <div class="keywordList">
+                        <p class="strong">polices</p>
+                        <p class="medium">licences</p>
+                    </div>
+                    <em>Catalogue de polices de caractère</em>
+                    <p>
+                        <li><b>Rechercher des fonts</b> par catégories, familles, etc</li>
+                        <li>Pouvoir réutiliser des fonts de <b>licences connues</b> (Disney, séries...)</li>
+                    </p>
+                    <a href="https://www.fontspace.com/" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <div class="bail recoIntervenant show" id="theBezierGame">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="intervenant">The Bézier Game</h4>
+                    <div class="keywordList">
+                        <p class="strong">bézier</p>
+                        <p class="medium">jeu</p>
+                    </div>
+                    <em>Jeu d'apprentissage de la plume</em>
+                    <p>
+                        <li><b>18 Exercices</b> de formes à reproduire à la plume</li>
+                        <li><b>Introduction ludique</b> à l'outil plume</li>
+                    </p>
+                    <a href="https://bezier.method.ac/" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <div class="bail recoEtud show" id="removebg">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="etud">Remove Background</h4>
+                    <div class="keywordList">
+                        <p class="strong">background</p>
+                        <p class="medium">automatique</p>
+                    </div>
+                    <em>Suppression automatique d'arrière-plan</em>
+                    <p>
+                        <li><b>Supprimer automatiquement</b> l'arrière-plan d'une image, icône, etc.</li>
+                        <li>Importation sous fichier ou URL</li>
+                        <li>Exportation sous PNG</li>
+                    </p>
+                    <a href="https://www.remove.bg/" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <div class="bail recoEtud show" id="ezgif">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="etud">EzGif</h4>
+                    <div class="keywordList">
+                        <p class="strong">éditeur</p>
+                        <p class="medium">gif</p>
+                    </div>
+                    <em>Éditeur & convertisseur de gifs</em>
+                    <p>
+                        <li><b>Éditer</b> et assembler un gif</li>
+                        <li><b>Convertir</b> une vidéo en gif</li>
+                        <li><b>Exporter</b> chaque frame d'un gif en zip </li>
+                        <li><b>Optimiser</b> les fichiers images</li>
+                        <br>
+                        <i>N.B. Interface peu flatteuse</i>
+                    </p>
+
+                    <a href="https://ezgif.com/" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <div class="bail recoProf show" id="miro">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="prof">Miro Video Converter</h4>
+                    <div class="keywordList">
+                        <p class="strong">compresseur</p>
+                        <p class="medium">fichier vidéo</p>
+                    </div>
+                    <em>Compresseur de fichier vidéo (Logiciel)</em>
+                    <p>
+                        <li><b>Compresser</b> et donc réduire grandement le poids d'un fichier vidéo</li>
+                        <li><b>Convertir</b> un format vidéo en un autre</li>
+                    </p>
+
+                    <a href="http://www.mirovideoconverter.com/" target="_blank">Télécharger</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+        </div>
+
+        <h2><i class="fas fa-lightbulb"></i> Inspiration</h2>
+        <hr>
+
+        <div class="listBails">
+
+
+            <div class="bail recoIntervenant show" id="dribble">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="intervenant">Dribble</h4>
+                    <div class="keywordList">
+                        <p class="strong">inspiration</p>
+                        <p class="medium">modèles 3D</p>
+                    </div>
+                    <em>Catalogue participatif de design</em>
+                    <p>
+                        <li><b>Découvrir le travail</b> de nombreux designers, infographistes, etc</li>
+                        <li>Poster son propre contenu</li>
+                    </p>
+
+                    <a href="https://dribbble.com/" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+
+            <div class="bail recoEtud show" id="sketchFab">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="etud">SketchFab</h4>
+                    <div class="keywordList">
+                        <p class="strong">inspiration</p>
+                        <p class="medium">modèles 3D</p>
+                    </div>
+                    <em>Catalogue participatif de modèles 3D</em>
+                    <p>
+                        <li><b>Découvrir le travail</b> de nombreux designers 3D</li>
+                        <li>Acheter des modèles 3D</li>
+                    </p>
+
+                    <a href="https://sketchfab.com/3d-models/popular" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <div class="bail recoIntervenant show" id="uiPatterns">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="intervenant">UI-Patterns</h4>
+                    <div class="keywordList">
+                        <p class="strong">glossaire</p>
+                        <p class="medium">références</p>
+                    </div>
+                    <em>Glossaire des motifs / règles de l'UI</em>
+                    <p>
+                        <li>Apprendre les règles et <b>conventions implicites</b> de l'UI</li>
+                        <li>Rechercher des <b>références</b> de vocubulaire</li>
+                    </p>
+
+                    <a href="http://ui-patterns.com/" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <div class="bail recoEtud show" id="behance">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="etud">Behance</h4>
+                    <div class="keywordList">
+                        <p class="strong">réseau social</p>
+                        <p class="medium">adobe</p>
+                    </div>
+                    <em>Plateforme participative de créations Adobe</em>
+                    <p>
+                        <li><b>Découvrir le travail</b> de nombreux designers (etc) sur la suite Adobe</li>
+                        <li>Poster son propre contenu</li>
+                        <li>Peut servir de catalogue de travail dans le <b>monde professionnel</b></li>
+                    </p>
+
+                    <a href="https://www.behance.net/" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer>
+        <p>2021 — Anna Maria Lannaud 
+            <a href="mailto:am.lannaud@gmail.com" target="_blank" class="SoMe" alt="Envoyer un mail"><i class="fas fa-at"></i></a>
+            <a href="https://www.linkedin.com/in/anna-maria-lannaud-a391671ba/" target="_blank" class="SoMe" alt="Compte LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.behance.net/anna-malannaud" target="_blank" class="SoMe" alt="Compte Behance"><i class="fab fa-behance-square"></i></a>
+        </p>
+    </footer>
+</body>
+
+</html>

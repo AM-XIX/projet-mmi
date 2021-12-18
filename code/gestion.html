@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMI Toolbox : Divers</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="medias/logoWhite.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- JS & JQuery & AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="app.js"></script>
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/e6c960569c.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body onscroll="shrink()" id="all">
+    <section class="menu">
+        <a href="index.php"><img id="logoPage" src="medias/logoWhite.png" alt=""></a>
+        <nav>
+            <li><a href="index.php">Accueil</a></li>
+            <li><a href="dev.html">Développement</a></li>
+            <li><a href="graphisme.html">Graphisme</a></li>
+            <li><a href="communication.html">Communication</a></li>
+            <li class="activePage"><a href="gestion.html">Divers</a></li>
+        </nav>
+    </section>
+
+    <section class="page">
+        <h1>Divers</h1>
+
+        <h3>Recommandations par :</h3>
+        <div class="tagList">
+            <p class="tag all active" onclick="filterSelection('all')">Tous</p>
+            <p class="tag prof" onclick="filterSelection('recoProf')">Professeur</p>
+            <p class="tag intervenant" onclick="filterSelection('recoIntervenant')">Intervenant(e)</p>
+            <p class="tag etud" onclick="filterSelection('recoEtud')">Étudiant(e)</p>
+        </div>
+
+        <div class="reco">
+            <a href="index.php#reco"><i class="fas fa-paper-plane"></i> Proposer un lien</a>
+        </div>
+
+        <!-- GESTION DE PROJET -->
+
+        <h2><i class="far fa-calendar-alt"></i> Gestion de projet</h2>
+        <hr>
+
+        <div class="listBails">
+
+            <div class="bail recoEtud show" id="evernote">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="etud">Evernote</h4>
+                    <div class="keywordList">
+                        <p class="strong">notes</p>
+                        <p class="medium">cloud</p>
+                    </div>
+                    <em>Outil de prises de note multimédia</em>
+                    <p>
+                        <li><b>Prendre des notes multimédia :</b> textes, messages vocaux, tableaux, photos, liens (etc)
+                        </li>
+                        <li>Organiser une <b>to-do list</b></li>
+                        <li><b>Synchronisations</b> mobile et desktop</li>
+                    </p>
+                    <a href="https://evernote.com/intl/fr/" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <div class="bail recoProf show" id="coachingAgile">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="prof">Coaching Agile</h4>
+                    <div class="keywordList">
+                        <p class="strong">méthode Agile</p>
+                        <p class="medium">blog</p>
+                    </div>
+                    <em>Blog dédié aux méthodes Agiles</em>
+                    <p>
+                        <li><b>Articles</b> pour approfondir ses connaissances en méthodes Agiles</li>
+                        <li><b>Dictionnaire Agile</b> et guides détaillés</li>
+                    </p>
+                    <a href="http://lolcx.blogspot.com/" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <div class="bail recoIntervenant show" id="rainDrop">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="intervenant">RainDrop</h4>
+                    <div class="keywordList">
+                        <p class="strong">favoris</p>
+                        <p class="medium">navigation</p>
+                    </div>
+                    <em>Gestionnaire de favoris</em>
+                    <p>
+                        <li>Organiser sa navigation, gérer liens, enregistrer des captures... </li>
+                        <li>Créer des mindmaps avec les liens enregistrés</li>
+                    </p>
+                    <a href="https://raindrop.io/" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+        </div>
+
+              <!-- COMPRESSION / CONVERSION -->
+
+              <h2><i class="fas fa-tools"></i> Outils & Compression</h2>
+              <hr>
+      
+              <div class="listBails">
+      
+                  <div class="bail recoProf show" id="ilovepdf">
+                      <div class="fond"></div>
+                      <div class="slide">
+                          <h4 class="prof">I love PDF</h4>
+                          <div class="keywordList">
+                              <p class="strong">compression</p>
+                              <p class="medium">pdf</p>
+                          </div>
+                          <em>Collection d'outils PDF</em>
+                          <p>
+                              <li><b>Compresser</b> un PDF et en réduire considérablement le poids</li>
+                              <li>Diviser, fusionner, numéroter (et d'autres) les PDF</li>
+                              <li><b>Convertir</b> un PDF en de nombreux autres formats (et inversement)</li>
+                          </p>
+                          <a href="https://www.ilovepdf.com/" target="_blank">Découvrir</a>
+                          <br><br><br>
+                      </div>
+                  </div>
+      
+                  <div class="bail recoEtud show" id="qrcodeGenerator">
+                      <div class="fond"></div>
+                      <div class="slide">
+                          <h4 class="etud">The QRCode Generator</h4>
+                          <div class="keywordList">
+                              <p class="strong">générateur</p>
+                              <p class="medium">qrcode</p>
+                          </div>
+                          <em>Générateur de QRCode en ligne</em>
+                          <p>
+                              <li>Générer un QRCode à partir d'un lien</li>
+                              <li>Télécharger le QRCode aux formats PNG, SVG, EPS, sans inscription</li>
+                          </p>
+                          <a href="https://www.the-qrcode-generator.com/fr/" target="_blank">Découvrir</a>
+                          <br><br><br>
+                      </div>
+                  </div>
+      
+              </div>
+      
+        <!-- DISCORD -->
+        <h2><i class="fab fa-discord"></i> Discord</h2>
+        <hr>
+
+        <div class="listBails">
+            <div class="bail recoEtud show" id="probot">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="etud">ProBot</h4>
+                    <div class="keywordList">
+                        <p class="strong">bot</p>
+                        <p class="medium">utilitaire</p>
+                    </div>
+                    <em>Bot de modération, fun, etc</em>
+                    <p>
+                        <li><b>Programmer</b> des commandes personnalisées</li>
+                        <li><b>Interface web</b> dédiée à le gérer pour l'administrateur </li>
+                        <li>Remplir des fonctions modératrices, utilitaires, amusantes...</li>
+                    </p>
+                    <a href="https://probot.io" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <div class="bail recoEtud show" id="emojigg">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="etud">emoji.gg</h4>
+                    <div class="keywordList">
+                        <p class="strong">emojis</p>
+                        <p class="medium">communauté</p>
+                    </div>
+                    <em>Bibliothèque d'émojis Discord</em>
+                    <p>
+                        <li>Télécharger des émojis pour Discord depuis une très longue liste</li>
+                        <li>Uploader ses propres émojis pour les partager à la communauté</li>
+                    </p>
+                    <a href="https://emoji.gg/" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <div class="bail recoEtud show" id="shesh">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="etud">Shesh</h4>
+                    <div class="keywordList">
+                        <p class="strong">bot</p>
+                        <p class="medium">planning</p>
+                    </div>
+                    <em>Bot de planning</em>
+                    <p>
+                        <li>Plannifier des évènement et déterminer des rappels dans le serveur</li>
+                        <li>Lier un agenda Google Agenda au bot pour qu'il fasse des rappels automatiques</li>
+                    </p>
+                    <a href="https://sesh.fyi/" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+
+    <footer>
+        <p>2021 — Anna Maria Lannaud 
+            <a href="mailto:am.lannaud@gmail.com" target="_blank" class="SoMe" alt="Envoyer un mail"><i class="fas fa-at"></i></a>
+            <a href="https://www.linkedin.com/in/anna-maria-lannaud-a391671ba/" target="_blank" class="SoMe" alt="Compte LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.behance.net/anna-malannaud" target="_blank" class="SoMe" alt="Compte Behance"><i class="fab fa-behance-square"></i></a>
+        </p>
+    </footer>
+</body>
+
+</html>

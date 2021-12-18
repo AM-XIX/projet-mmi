@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMI Toolbox : Dev</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="medias/logoWhite.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- JS & JQuery & AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="app.js"></script>
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/e6c960569c.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body onscroll="shrink()" id="all">
+    <section class="menu">
+        <a href="index.php"><img id="logoPage" src="medias/logoWhite.png" alt="Accueil"></a>
+        <nav>
+            <li><a href="index.php">Accueil</a></li>
+            <li class="activePage"><a href="dev.html">Développement</a></li>
+            <li><a href="graphisme.html">Graphisme</a></li>
+            <li><a href="communication.html">Communication</a></li>
+            <li><a href="gestion.html">Divers</a></li>
+        </nav>
+    </section>
+
+    <section class="page">
+        <h1>Développement</h1>
+
+        <h3>Trier recommandations par :</h3>
+        <div class="tagList">
+            <p class="tag all active" onclick="filterSelection('all')">Tous</p>
+            <p class="tag prof" onclick="filterSelection('recoProf')">Professeur</p>
+            <p class="tag intervenant" onclick="filterSelection('recoIntervenant')">Intervenant(e)</p>
+            <p class="tag etud" onclick="filterSelection('recoEtud')">Étudiant(e)</p>
+        </div>
+
+        <div class="reco">
+            <a href="index.php#reco"><i class="fas fa-paper-plane"></i> Proposer un lien</a>
+        </div>
+
+        <!-- COULEURS -->
+
+        <h2><i class="fas fa-palette"></i> Couleurs</h2>
+        <hr>
+
+        <div class="listBails">
+
+            <div class="bail recoIntervenant show" id="coolors">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="intervenant">Coolors</h4>
+                    <div class="keywordList">
+                        <p class="strong">palettes</p>
+                        <p class="medium">générateur</p>
+                    </div>
+                    <em>Catalogue de palettes de couleur</em>
+                    <p>
+                        <li><b>Découvrir</b> des palettes préfaites</li>
+                        <li><b>Générer</b> de nouvelles palettes</li>
+                        <li>Poster ses propres palettes</li>
+                    </p>
+                    <a href="https://coolors.co/" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <div class="bail recoEtud show" id="colorPicker">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="etud">Color Picker</h4>
+                    <div class="keywordList">
+                        <p class="strong">extension</p>
+                        <p class="medium">couleurs</p>
+                    </div>
+                    <em>Extension Google Chrome</em>
+                    <p>
+                        <li>Copier le <b>code couleur HEX</b> de n’importe quel élément présent dans la fenêtre du
+                            navigateur</li>
+                    </p>
+                    <a href="https://chrome.google.com/webstore/detail/colorpick-eyedropper/ohcpnigalekghcmgcdcenkpelffpdolg"
+                        target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <div class="bail recoIntervenant show" id="colorSpace">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="intervenant">Color Space</h4>
+                    <div class="keywordList">
+                        <p class="strong">couleurs</p>
+                        <p class="medium">dégradés</p>
+                    </div>
+                    <em>Générateur de dégradés</em>
+                    <p>
+                        <li><b>Générer des dégradés</b></li>
+                        <li>Exporter directement en code CSS</li>
+                        <li>Explorer des palettes de couleurs</li>
+                    </p>
+                    <a href="https://mycolor.space/gradient" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- GENERATEURS -->
+
+        <h2><i class="fas fa-random"></i> Générateurs</h2>
+        <hr>
+
+        <div class="listBails">
+
+            <div class="bail recoIntervenant show" id="blobMaker">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="intervenant">Blob Maker</h4>
+                    <div class="keywordList">
+                        <p class="strong">générateur</p>
+                        <p class="medium">svg</p>
+                    </div>
+                    <em>Générateur de blobs</em>
+                    <p>
+                        <li><b>Créer des blobs</b>, régler les angles, etc</li>
+                        <li>Exporter au format SVG ou code HTML</li>
+                    </p>
+                    <a href="https://www.blobmaker.app/" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+
+            <div class="bail recoEtud show" id="clippath">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="etud">CSS Clip Path Generator</h4>
+                    <div class="keywordList">
+                        <p class="strong">générateur</p>
+                        <p class="medium">clip path</p>
+                    </div>
+                    <em>Générateur de Clip path</em>
+                    <p>
+                        <li><b>Créer et paramétrer</b> des Clip Path</li>
+                        <li>Exporter le path en tant que code CSS</li>
+                    </p>
+                    <a href="https://10015.io/tools/css-clip-path-generator" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <div class="bail recoProf show" id="cubicBezier">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="prof">cubic-bézier</h4>
+                    <div class="keywordList">
+                        <p class="strong">bézier</p>
+                        <p class="medium">transitions</p>
+                    </div>
+                    <em>Générateur de courbe bézier</em>
+                    <p>
+                        <li><b>Paramétrer une courbe bézier</b> pour personnaliser la courbe de vitesse d'une
+                            <b>transition</b>, ou une animation </li>
+                        <li>Animations de comparaison</li>
+                        <li><b>Importation</b> et <b>exportation</b> sous code CSS</li>
+                    </p>
+                    <a href="https://cubic-bezier.com" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- JEUX -->
+
+        <h2><i class="fas fa-dice"></i> Jeux pédagogiques</h2>
+        <hr>
+
+        <div class="listBails">
+
+            <div class="bail recoIntervenant show" id="cssDiner">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="intervenant">CSS Diner</h4>
+                    <div class="keywordList">
+                        <p class="strong">exercices</p>
+                        <p class="medium">CSS</p>
+                    </div>
+                    <em>Exercices d'entraînement au CSS</em>
+                    <p>
+                        <li><b>32 exercices</b> de CSS</li>
+                        <li>Exercices / Interface ludiques</li>
+                    </p>
+                    <a href="https://flukeout.github.io" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <div class="bail recoProf show" id="froggy">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="prof">Flexbox Froggy</h4>
+                    <div class="keywordList">
+                        <p class="strong">exercices</p>
+                        <p class="medium">flex</p>
+                    </div>
+                    <em>Jeu d'introduction au Flex</em>
+                    <p>
+                        <li><b>24 exercices</b> sur le flex</li>
+                        <li>Exercices / Interface ludiques</li>
+                    </p>
+                    <a href="https://flexboxfroggy.com/#fr" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <div class="bail recoProf show" id="gridGarden">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="prof">Grid Garden</h4>
+                    <div class="keywordList">
+                        <p class="strong">exercices</p>
+                        <p class="medium">grid</p>
+                    </div>
+                    <em>Jeu d'introduction au Grid</em>
+                    <p>
+                        <li><b>28 exercices</b> sur la grid</li>
+                        <li>Exercices / Interface ludiques</li>
+                    </p>
+                    <a href="https://cssgridgarden.com/#fr" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <div class="bail recoIntervenant show" id="codeWars">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="intervenant">Code Wars</h4>
+                    <div class="keywordList">
+                        <p class="strong">challenges</p>
+                        <p class="medium">javascript</p>
+                    </div>
+                    <em>Jeux compétitifs de code</em>
+                    <p>
+                        <li><b>Challenges</b> pour s'améliorer en code <i>(JS, PHP, SQL, Shell, Java...)</i></li>
+                        <li><b>Système ludique</b> et pédagogique</li>
+                    </p>
+                    <a href="https://www.codewars.com/" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- OUTILS -->
+
+        <h2><i class="fas fa-tools"></i> Outils</h2>
+        <hr>
+
+        <div class="listBails">
+
+            <div class="bail recoProf show" id="kraken">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="prof">Kraken.io</h4>
+                    <div class="keywordList">
+                        <p class="strong">optimisation</p>
+                        <p class="medium">images</p>
+                    </div>
+                    <em>Optimiseur d’images</em>
+                    <p>
+                        <li>Obtenir une <b>meilleure performance</b> du navigateur</li>
+                        <li>3 niveaux d'optimisation</li>
+                    </p>
+                    <a href="https://kraken.io/web-interface" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <div class="bail recoEtud show" id="zupimages">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="etud">Zupimages</h4>
+                    <div class="keywordList">
+                        <p class="strong">hébergement</p>
+                        <p class="medium">images</p>
+                    </div>
+                    <em>Hébergeur d'images</em>
+                    <p>
+                        <li><b>Générer un lien</b> pour chaque image hébergée</li>
+                        <li>Permettre l'utilisation une image sans la stocker dans le dossier local </li>
+                    </p>
+                    <a href="https://www.zupimages.net/" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <div class="bail recoEtud show" id="protonVPN">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="etud">Proton VPN</h4>
+                    <div class="keywordList">
+                        <p class="strong">VPN</p>
+                        <p class="medium">gratuit</p>
+                    </div>
+                    <em>Virtual Private Network</em>
+                    <p>
+                        <li><b>VPN</b> gratuit (sans engagement) bien que limité, facile d'utilisation</li>
+                        <li>Localisation gratuites : Japon, US, et Netherlands</b></li>
+                    </p>
+                    <a href="https://protonvpn.com/" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- DOCUMENTATION -->
+
+        <h2><i class="fas fa-file-alt"></i> Documentation</h2>
+        <hr>
+
+        <div class="listBails">
+
+            <div class="bail recoProf show" id="mdn">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="prof">MDN Web Docs</h4>
+                    <div class="keywordList">
+                        <p class="strong">documentation</p>
+                        <p class="medium">français</p>
+                    </div>
+                    <em>Documentation</em>
+                    <p>
+                        <li><b>Glossaire :</b> <i>HTML, CSS, JS, HTTP, SVG, MathML, APIWeb... </i></li>
+                        <li><b>Cours</b> et <b>références</b> en français</li>
+                    </p>
+                    <a href="https://developer.mozilla.org/fr/docs/Web" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <div class="bail recoEtud show" id="w3school">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="etud">W3School</h4>
+                    <div class="keywordList">
+                        <p class="strong">cours</p>
+                        <p class="medium">anglais</p>
+                    </div>
+                    <em>Documentation & Tutoriels</em>
+                    <p>
+                        <li><b>Glossaire :</b> <i>HTML, CSS (Bootstrap), JS (JQuery, React, Angular, three.js), PHP,
+                                SQL, AJAX, PYTHON, JAVA...</i></li>
+                        <li><b>Cours</b> et <b>Exercices</b> en anglais</li>
+                    </p>
+                    <a href="https://www.w3schools.com/" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <div class="bail recoProf show" id="cssReference">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="prof">CSS Reference</h4>
+                    <div class="keywordList">
+                        <p class="strong">glossaire</p>
+                        <p class="medium">anglais</p>
+                    </div>
+                    <em>Glossaire de CSS</em>
+                    <p>
+                        <li><b>Glossaire</b> complet et fiable de CSS</li>
+                        <li>Interface graphique <b>intuitive</b> et ludique</li>
+                    </p>
+                    <a href="https://cssreference.io/" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <div class="bail recoProf show" id="whatIs">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="prof">WhatIs</h4>
+                    <div class="keywordList">
+                        <p class="strong">glossaire</p>
+                        <p class="medium">réseaux</p>
+                    </div>
+                    <em>Grand dictionnaire IT</em>
+                    <p>
+                        <li><b>Glossaire très complet</b> de tous les termes de <b>réseaux</b> (entre autres)</li>
+                        <li>Entièrement traduit en <b>français</b></li>
+                    </p>
+                    <a href="https://whatis.techtarget.com/fr/glossaire/Reseau" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- REGLEMENTATION & ACCESSIBILITÉ  -->
+
+        <h2><i class="fas fa-wheelchair"></i> Réglementations & Accessibilité </h2>
+        <hr>
+
+        <div class="listBails">
+
+            <div class="bail recoProf show" id="rgaa">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="prof">RGAA</h4>
+                    <div class="keywordList">
+                        <p class="strong">critères</p>
+                        <p class="medium">accessibilité</p>
+                    </div>
+                    <em>Référentiel Général d'Amélioration <br>de l'Accessibilité</em>
+                    <p>
+                        <li>Liste des critères nécessaires à l'<b>accessibilité numérique</b></li>
+                        <li>Documentation du Gouvernement</li>
+                    </p>
+                    <a href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/methode-rgaa/criteres/#topic3"
+                        target="_blank">Consulter</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <div class="bail recoProf show" id="adobeContrastAnalyzer">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="prof">Adobe Contrast Analyzer</h4>
+                    <div class="keywordList">
+                        <p class="strong">accessibilité</p>
+                        <p class="medium">contrastes</p>
+                    </div>
+                    <em>Vérificateur de contrastes (Accessibilité)</em>
+                    <p>
+                        <li>Indiquer le <b>taux de contraste</b> entre 2 couleurs</li>
+                        <li>Le comparer avec la <b>norme WCAG</b></li>
+                        <li>Recommander des tailles et épaisseurs de caractère en conséquence</li>
+                    </p>
+                    <a href="https://color.adobe.com/fr/create/color-contrast-analyzer" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- A TRIER -->
+
+        <h2><i class="fas fa-lightbulb"></i> Inspiration</h2>
+        <hr>
+
+        <div class="listBails">
+
+            <div class="bail recoEtud show" id="codePen">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="etud">CodePen</h4>
+                    <div class="keywordList">
+                        <p class="strong">éditeur</p>
+                        <p class="medium">opensource</p>
+                    </div>
+                    <em>Éditeur de code en ligne</em>
+                    <p>
+                        <li>HTML, CSS, et JS (affichés simultanément)</li>
+                        <li>Actualisation en temps réel</li>
+                        <li>Stockage "Drive" de codes (mobile et desktop)</li>
+                    </p>
+                    <p>
+                        <i>À noter : tout code mis sur CodePen est considéré comme Open Source. <a class="more"
+                                href="https://blog.codepen.io/documentation/licensing/" target="_blank">En savoir +</a>
+                        </i>
+                    </p>
+                    <a href="https://codepen.io/" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <div class="bail recoIntervenant show" id="awwwards">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="intervenant">Awwwards</h4>
+                    <div class="keywordList">
+                        <p class="strong">awards</p>
+                        <p class="medium">développeurs</p>
+                    </div>
+                    <em>Awards des plus beaux sites du web</em>
+                    <p>
+                        <li><b>Découvrir</b> le travail nombreux développeurs</li>
+                        <li><b>Trouver de l'inspiration</b>, aussi bien technique qu'esthétique</b></li>
+                    </p>
+                    <a href="https://www.awwwards.com/" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <div class="bail recoEtud show" id="codrops">
+                <div class="fond"></div>
+                <div class="slide">
+                    <h4 class="etud">Codrops</h4>
+                    <div class="keywordList">
+                        <p class="strong">recommandations</p>
+                        <p class="medium">tutoriels</p>
+                    </div>
+                    <em>Blog de sites de références et tutoriels</em>
+                    <p>
+                        <li><b>Tutoriels</b> expliquant le code utilisé derrière d'impressionnants sites web</li>
+                        <li><b>Articles</b> de mises à jour des dernières tendances du web</b></li>
+                    </p>
+                    <a href="https://tympanus.net/codrops/" target="_blank">Découvrir</a>
+                    <br><br><br>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        <p>2021 — Anna Maria Lannaud 
+            <a href="mailto:am.lannaud@gmail.com" target="_blank" class="SoMe" alt="Envoyer un mail"><i class="fas fa-at"></i></a>
+            <a href="https://www.linkedin.com/in/anna-maria-lannaud-a391671ba/" target="_blank" class="SoMe" alt="Compte LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.behance.net/anna-malannaud" target="_blank" class="SoMe" alt="Compte Behance"><i class="fab fa-behance-square"></i></a>
+        </p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+version: "3"
+
+services:
+  web:
+    build: 
+      context: ./php
+    restart: 'always'
+    volumes:
+      - "./code:/var/www/html"
+    depends_on:
+      - mariadb
+    restart: 'always'
+    ports:
+      - '9080:80'
+    links:
+      - mariadb
+    environment:
+      MYSQL_HOST: "mariadb"
+      MYSQL_DATABASE: "${MYSQL_DATABASE}"
+      MYSQL_USER: "${MYSQL_USER}"
+      MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
+  mariadb:
+    image: "mariadb:10.5"
+    restart: 'always'
+    volumes: 
+      - "./data:/var/lib/mysql"
+      - "./logs:/var/log/mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+      MYSQL_DATABASE: "${MYSQL_DATABASE}"
+      MYSQL_USER: "${MYSQL_USER}"
+      MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    links:
+    - mariadb
+    environment:
+      PMA_HOST: mariadb
+      PMA_PORT: 3306
+      PMA_USER: root
+      PMA_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+    - '9081:80'
